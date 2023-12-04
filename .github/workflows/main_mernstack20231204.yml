@@ -47,6 +47,8 @@ jobs:
     steps:
       - name: Azure Login
         uses: Azure/login@v1.5.0
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
             
       - name: Download artifact from build job
         uses: actions/download-artifact@v2
